@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizeLibrary", "AuthorizeLibrary\AuthorizeLibrary-master\AuthorizeLibrary.csproj", "{226B402F-C512-4792-8760-F3AB986BA513}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBModels", "DBModels\DBModels.csproj", "{93CDAF84-BBC0-42B4-B412-67B8B67EC163}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jsonCultuerLocalizerLibrary", "jsonCultuerLocalizerLibrary\jsonCultuerLocalizerLibrary-master\jsonCultuerLocalizerLibrary.csproj", "{32803346-3B21-45C4-807C-9F069F571F84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.web", "App.web\App.web.csproj", "{F5330A46-FB87-4E83-843D-65058B5DAFA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{226B402F-C512-4792-8760-F3AB986BA513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226B402F-C512-4792-8760-F3AB986BA513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226B402F-C512-4792-8760-F3AB986BA513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226B402F-C512-4792-8760-F3AB986BA513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93CDAF84-BBC0-42B4-B412-67B8B67EC163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93CDAF84-BBC0-42B4-B412-67B8B67EC163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93CDAF84-BBC0-42B4-B412-67B8B67EC163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93CDAF84-BBC0-42B4-B412-67B8B67EC163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32803346-3B21-45C4-807C-9F069F571F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32803346-3B21-45C4-807C-9F069F571F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32803346-3B21-45C4-807C-9F069F571F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32803346-3B21-45C4-807C-9F069F571F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5330A46-FB87-4E83-843D-65058B5DAFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5330A46-FB87-4E83-843D-65058B5DAFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5330A46-FB87-4E83-843D-65058B5DAFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5330A46-FB87-4E83-843D-65058B5DAFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E1AF2E5-331D-4194-ABBE-7E759F9808B2}
+	EndGlobalSection
+EndGlobal
