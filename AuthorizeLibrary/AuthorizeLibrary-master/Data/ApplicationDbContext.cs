@@ -1,9 +1,11 @@
 ﻿//using AuthorizeLibrary.IdentityModel;
+using DBModels;
 using DBModels.AppModels;
 using DBModels.IdentityModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Reflection.Emit;
 
 namespace AuthorizeLibrary.Data
@@ -41,13 +43,33 @@ namespace AuthorizeLibrary.Data
             
         }
 
-        public DbSet<Claimant> Claimants { get; set; }
+        public DbSet<ContacteType> ContacteTypes { get; set; }
 
-        public override int SaveChanges()
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             var state = new EntityState[] { EntityState.Added, EntityState.Modified, EntityState.Deleted };
-            var change = ChangeTracker.Entries();
-            return base.SaveChanges();  
+            var changeSet = ChangeTracker.Entries().Where(c => state.Contains(c.State));
+            foreach(var item in changeSet)
+            {
+                if(!(item is null))
+                {
+                    var entityModel = item.Entity as MainModel;
+                    if (item.State == EntityState.Added && !(entityModel is null))
+                    {
+                        entityModel.addModel();
+                    }
+                    else if(item.State == EntityState.Modified && !(entityModel is null))
+                    {
+                        entityModel.updateModel();
+                    }
+                    else if (item.State == EntityState.Deleted && !(entityModel is null))
+                    {
+                        entityModel.deleteModel();
+                        item.State = EntityState.Modified;
+                    }
+                }
+            }
+            return base.SaveChangesAsync(cancellationToken);
         }
 
     }

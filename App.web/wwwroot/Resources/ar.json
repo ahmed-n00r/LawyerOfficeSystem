@@ -33,8 +33,11 @@
   "Group": "المجموعه",
   "Save": "حفظ",
   "CreateNew": "اشاء {0} جديد",
+  "EditNew": "تعديل : {0}",
+  "DeleteNew": "حذف : {0}",
   "Roles": "الصلاحياة",
   "UserName": "اسم المستخدم",
+  "Back": "تراجع",
 
   "StudentTasks": "مهام الطلاب",
   "TaskStatus": "حالة المهمه",
@@ -43,6 +46,29 @@
   "RoleName": "صلاحية اغلاق المهمه",
   "TaskId": "تابع للمه",
   "Task": "مهمه",
+
+  /* Models */
+  "name": "الاسم",
+  "date": "التاريخ",
+  "Type": "نوع {0}",
+  "status": "الحاله",
+  "EnterdDate": "تاريخ الادخال",
+  "UpdateDate": "تارخ التعديل",
+  "DeleteDate": "تاريخ الحزف",
+  "EnterBy": "تم الادخال بواصطة",
+  "UpdateBy": "تم التعديل بواصطة",
+  "DeleteBy": "تم الحذف بواصطة",
+  "ContacteType": "نوع اتصال",
+
+  /*القائم الرئيسيه*/
+  "complainant": "المدعين",
+  "ContacteTypes": "وسائل الاتصال",
+  "identities": "الهويات",
+  "cases": "القضايه",
+  "lawyers": "المحامون",
+  "projectNmae": "نظام مكتب المحامه",
+  "new": "جديد",
+  "list": "قائمة",
 
   "StudentDuties": "مهام الطلبه",
   "Done": "تم",

@@ -10,5 +10,7 @@ namespace DBModels.AppConstants
     {
         Active = 1,
         NotActive = 0,
+        Delete = 2,
+        Update = 3,
     }
 }

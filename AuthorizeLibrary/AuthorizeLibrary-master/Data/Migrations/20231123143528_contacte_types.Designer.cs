@@ -4,16 +4,19 @@ using AuthorizeLibrary.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace AuthorizeLibrary.Data.Migrations
+namespace PermissionBasedAuthorization.web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231123143528_contacte_types")]
+    partial class contacte_types
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,9 +40,10 @@ namespace AuthorizeLibrary.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("EnterBy")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("EnterdDate")
+                    b.Property<DateTime>("EnterdDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -53,6 +57,7 @@ namespace AuthorizeLibrary.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("status")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

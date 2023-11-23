@@ -10,9 +10,11 @@ namespace DBModels.AppConstants
     public class ModelConstants
     {
         public static ModelData HomeModel { get => new() { IsActive = ModelActivationStatus.Active, Name = "Home", MainAction = "Index", Icon = "ni ni-tv-2 text-primary", Index = 1, VeiwName = "Dashboard" }; }
+
+        public static ModelData TestingModel { get => new() { IsActive = ModelActivationStatus.NotActive, Name = "ContacteTypes", MainAction = "Index", Icon = "ni ni-send text-primary", Index = 2, VeiwName = "ContacteTypes" }; }
         //
         public static List<ModelData> ModelList = new List<ModelData> {
-                HomeModel,
+                HomeModel,TestingModel
             }.OrderBy(k => k.Index).ToList();
 
         public static void setAllNotActive(string controllerName)

@@ -1,8 +1,10 @@
 using AuthorizeLibrary.Data;
+using DBModels.AppConstants;
 using DBModels.IdentityModel;
 using jsonCultuerLocalizerLibrary;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System.Globalization;
@@ -57,6 +59,7 @@ else
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.MapControllers().RequireAuthorization();
 
 var localizationOptions = new RequestLocalizationOptions()
     .SetDefaultCulture(supportedLanguage[0])
@@ -73,5 +76,25 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+app.Use(async (context, next) =>
+{
+
+    var controllerActionDescriptor = context?
+        .GetEndpoint()?
+        .Metadata
+        .GetMetadata<ControllerActionDescriptor>();
+
+    var controllerName = controllerActionDescriptor?.ControllerName;
+    var actionName = controllerActionDescriptor?.ActionName;
+
+    ModelConstants.setAllNotActive(controllerName ?? "");
+    AppConstants.colorName = context.Request.Cookies["dataColor"] ?? "primary";
+    AppConstants.isRTL = CultureInfo.CurrentCulture.Name.StartsWith("ar");
+    AppConstants.controller = controllerName;
+    AppConstants.action = actionName;
+    await next.Invoke();
+
+});
 
 app.Run();

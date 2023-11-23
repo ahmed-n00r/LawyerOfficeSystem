@@ -32,9 +32,12 @@
   "Group": "Group",
   "Save": "Save",
   "CreateNew": "Create new {0}",
+  "EditNew": "Update : {0}",
+  "DeleteNew": "Delete : {0}",
   "NameWith": "{0} name",
   "Roles": "Roles",
   "UserName": "User Name",
+  "Back": "Back",
 
   "StudentTasks": "Student sask",
   "TaskStatus": "Task status",
@@ -43,6 +46,29 @@
   "RoleName": "Role Name",
   "TaskId": "Barent task",
   "Task": "Task",
+
+  /* Models */
+  "name": "Name",
+  "date": "Date",
+  "Type": "Type {0}",
+  "status": "Status",
+  "EnterdDate": "Enterd Date",
+  "UpdateDate": "Update Date",
+  "DeleteDate": "Delete Date",
+  "EnterBy": "Enter By",
+  "UpdateBy": "Update By",
+  "DeleteBy": "Delete By",
+  "ContacteType": "Connection type",
+
+  /*القائم الرئيسيه*/
+  "complainant": "complainant",
+  "ContacteTypes": "Contacte Types",
+  "Identities": "Identities",
+  "cases": "Cases",
+  "lawyers": "Lawyers",
+  "projectNmae": "Lower Office System",
+  "new": "New",
+  "list": "List",
 
   "StudentDuties": "Student duties",
   "Done": "Done",
