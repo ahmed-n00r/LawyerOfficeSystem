@@ -60,6 +60,8 @@
   "DeleteBy": "Delete By",
   "ContacteType": "Connection type",
   "LowyerNo": "Lowyer No",
+  "Identity": "Identity",
+  "IdentityType": "Identity Type",
 
   /*القائم الرئيسيه*/
   "complainant": "complainant",

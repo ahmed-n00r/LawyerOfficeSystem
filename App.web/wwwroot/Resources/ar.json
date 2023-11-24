@@ -60,6 +60,8 @@
   "DeleteBy": "تم الحذف بواصطة",
   "ContacteType": "نوع اتصال",
   "LowyerNo": "رقم المحامي",
+  "Identity": "الهويه",
+  "IdentityType": "نوع الهويه",
 
   /*القائم الرئيسيه*/
   "complainant": "المدعين",

@@ -1,0 +1,46 @@
+﻿@model DBModels.AppModels.Claimant
+
+@{
+    ViewData["Title"] = "Delete";
+    var isRTL = CultureInfo.CurrentCulture.Name.StartsWith("ar");
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <div class="d-flex align-items-center">
+                        <p class="mb-0">@(string.Format(localizer["DeleteNew"].Value, Model.Name))</p>
+                        <div class="@(isRTL ? "me-sm-auto" : "ms-auto")">
+                            <form asp-action="Delete">
+                                <input type="hidden" asp-for="ID" />
+                                <input type="submit" value="@localizer["Delete"]" class="btn btn-danger btn-sm" /> |
+                                <a asp-action="Index" type="button" class="btn btn-@AppConstants.buttonClass btn-sm">@localizer["Back"]</a>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <dl class="row">
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.Identity)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Identity)
+                            </dd>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.IdentityType)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.IdentityType.Name)
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

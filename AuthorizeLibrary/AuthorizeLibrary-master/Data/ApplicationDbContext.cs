@@ -46,6 +46,7 @@ namespace AuthorizeLibrary.Data
         public DbSet<ContacteType> ContacteTypes { get; set; }
         public DbSet<IdentityType> IdentityTypes { get; set; }
         public DbSet<Lowyer> lowyers { get; set; }
+        public DbSet<Claimant> Claimants { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

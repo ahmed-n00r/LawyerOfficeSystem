@@ -12,14 +12,14 @@ namespace DBModels.AppModels
     {
         [Display(Name = "name"), Required(ErrorMessage = "required")]
         public string Name { get; set; }
-        [Display(Name = "identity"), Required(ErrorMessage = "required")]
+        [Display(Name = "Identity"), Required(ErrorMessage = "required")]
         public string Identity { get; set; }
 
         [ForeignKey("IdentityType")]
-        [Display(Name = "identityType"), Required(ErrorMessage = "required")]
+        [Display(Name = "IdentityType"), Required(ErrorMessage = "required")]
         public long IdentityTypeId { get; set; }
 
-        [Display(Name = "identityType")]
-        public IdentityType IdentityType { get; set; }
+        [Display(Name = "IdentityType")]
+        public IdentityType? IdentityType { get; set; }
     }
 }
