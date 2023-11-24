@@ -38,6 +38,7 @@
   "Roles": "الصلاحياة",
   "UserName": "اسم المستخدم",
   "Back": "تراجع",
+  "AppName": "نظام مكتب المحاماة",
 
   "StudentTasks": "مهام الطلاب",
   "TaskStatus": "حالة المهمه",
@@ -62,6 +63,12 @@
   "LowyerNo": "رقم المحامي",
   "Identity": "الهويه",
   "IdentityType": "نوع الهويه",
+  "Case": "قضيه",
+  "Cases": "القضيه",
+  "CaseDoc": "وصف القضيه",
+  "StartDate": "تاريخ البدايه",
+  "Lowyer": "المحامي",
+  "Claimant": "المدعي",
 
   /*القائم الرئيسيه*/
   "complainant": "المدعين",
@@ -73,6 +80,7 @@
   "projectNmae": "نظام مكتب المحامه",
   "new": "جديد",
   "list": "قائمة",
+  "LowCases": "القضايه",
 
   "StudentDuties": "مهام الطلبه",
   "Done": "تم",

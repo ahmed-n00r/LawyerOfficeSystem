@@ -38,6 +38,7 @@
   "Roles": "Roles",
   "UserName": "User Name",
   "Back": "Back",
+  "AppName": "Law office system",
 
   "StudentTasks": "Student sask",
   "TaskStatus": "Task status",
@@ -62,6 +63,13 @@
   "LowyerNo": "Lowyer No",
   "Identity": "Identity",
   "IdentityType": "Identity Type",
+  "Case": "Case",
+  "Cases": "Cases",
+
+  "CaseDoc": "Case description",
+  "StartDate": "Start Date",
+  "Lowyer": "Lowyer",
+  "Claimant": "Claimant",
 
   /*القائم الرئيسيه*/
   "complainant": "complainant",
@@ -73,6 +81,7 @@
   "projectNmae": "Lower Office System",
   "new": "New",
   "list": "List",
+  "LowCases": "Lawyer case",
 
   "StudentDuties": "Student duties",
   "Done": "Done",

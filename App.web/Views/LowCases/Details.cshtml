@@ -1,0 +1,68 @@
+﻿@model DBModels.AppModels.LowCase
+
+@{
+    ViewData["Title"] = "Details";
+    var isRTL = CultureInfo.CurrentCulture.Name.StartsWith("ar");
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <div class="d-flex align-items-center ps__rtl">
+                        <p class="mb-0">@localizer["Details"]</p>
+                        <div class="@(isRTL ? "me-sm-auto" : "ms-auto")">
+                            <a asp-action="Index" type="button" class="btn btn-@AppConstants.buttonClass btn-sm">@localizer["Back"]</a> |
+                            <a asp-action="Edit" type="button" class="btn btn-@AppConstants.buttonClass btn-sm">@localizer["Edit"]</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <dl class="row">
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.Case)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Case)
+                            </dd>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.CaseDoc)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.CaseDoc)
+                            </dd>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.StartDate)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.StartDate)
+                            </dd>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.EndDate)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.EndDate)
+                            </dd>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.Claimant)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Claimant.Identity)
+                            </dd>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.Lowyer)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Lowyer.Name)
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
