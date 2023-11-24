@@ -63,7 +63,8 @@
   /*القائم الرئيسيه*/
   "complainant": "المدعين",
   "ContacteTypes": "وسائل الاتصال",
-  "identities": "الهويات",
+  "Identities": "الهويات",
+  "IdentitiesTypes": "انواع الهوياة",
   "cases": "القضايه",
   "lawyers": "المحامون",
   "projectNmae": "نظام مكتب المحامه",
