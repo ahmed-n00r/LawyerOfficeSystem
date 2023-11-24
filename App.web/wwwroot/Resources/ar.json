@@ -59,6 +59,7 @@
   "UpdateBy": "تم التعديل بواصطة",
   "DeleteBy": "تم الحذف بواصطة",
   "ContacteType": "نوع اتصال",
+  "LowyerNo": "رقم المحامي",
 
   /*القائم الرئيسيه*/
   "complainant": "المدعين",
@@ -66,7 +67,7 @@
   "Identities": "الهويات",
   "IdentitiesTypes": "انواع الهوياة",
   "cases": "القضايه",
-  "lawyers": "المحامون",
+  "Lawyers": "المحامون",
   "projectNmae": "نظام مكتب المحامه",
   "new": "جديد",
   "list": "قائمة",

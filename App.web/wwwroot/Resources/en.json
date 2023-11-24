@@ -59,6 +59,7 @@
   "UpdateBy": "Update By",
   "DeleteBy": "Delete By",
   "ContacteType": "Connection type",
+  "LowyerNo": "Lowyer No",
 
   /*القائم الرئيسيه*/
   "complainant": "complainant",
@@ -66,7 +67,7 @@
   "Identities": "Identities",
   "IdentitiesTypes": "Identities Types",
   "cases": "Cases",
-  "lawyers": "Lawyers",
+  "Lawyers": "Lawyers",
   "projectNmae": "Lower Office System",
   "new": "New",
   "list": "List",

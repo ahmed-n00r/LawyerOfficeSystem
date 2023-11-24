@@ -13,10 +13,12 @@ namespace DBModels.AppConstants
 
         public static ModelData ContacteTypesModel { get => new() { IsActive = ModelActivationStatus.NotActive, Name = "ContacteTypes", MainAction = "Index", Icon = "ni ni-send text-primary", Index = 2, VeiwName = "ContacteTypes" }; }
 
-        public static ModelData IdentityTypesModel { get => new() { IsActive = ModelActivationStatus.NotActive, Name = "IdentityTypes", MainAction = "Index", Icon = "ni ni-badge text-primary", Index = 3, VeiwName = "IdentitiesTypes" }; }
+        public static ModelData IdentityTypesModel { get => new() { IsActive = ModelActivationStatus.NotActive, Name = "IdentityTypes", MainAction = "Index", Icon = "ni ni-badge text-success text-sm opacity-10", Index = 3, VeiwName = "IdentitiesTypes" }; }
+
+        public static ModelData LowyersModel { get => new() { IsActive = ModelActivationStatus.NotActive, Name = "Lowyers", MainAction = "Index", Icon = "ni ni-single-02 text-dark text-sm opacity-10", Index = 4, VeiwName = "Lawyers" }; }
 
         public static List<ModelData> ModelList = new List<ModelData> {
-                HomeModel,ContacteTypesModel,IdentityTypesModel
+                HomeModel,ContacteTypesModel,IdentityTypesModel,LowyersModel
             }.OrderBy(k => k.Index).ToList();
 
         public static void setAllNotActive(string controllerName)

@@ -1,0 +1,46 @@
+﻿@model DBModels.AppModels.Lowyer
+
+@{
+    ViewData["Title"] = "Edit";
+    var isRTL = CultureInfo.CurrentCulture.Name.StartsWith("ar");
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <div class="d-flex align-items-center ps__rtl">
+                        <p class="mb-0">@(string.Format(localizer["EditNew"].Value, Model.Name))</p>
+                        <a asp-action="Index" type="button" class="btn btn-@AppConstants.buttonClass btn-sm @(isRTL ? "me-sm-auto" : "ms-auto")">@localizer["Back"]</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="ID" />
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="LowyerNo" class="control-label"></label>
+                                <input asp-for="LowyerNo" class="form-control" />
+                                <span asp-validation-for="LowyerNo" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="@localizer["Save"]" class="btn btn-@AppConstants.buttonClass" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
